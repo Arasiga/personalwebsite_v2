@@ -15,8 +15,8 @@ const Container = styled.div`
   -webkit-clip-path: polygon(65% 10%, 100% 0, 100% 100%, 22% 100%, 0 100%, 0 0);
   clip-path: polygon(65% 10%, 100% 0, 100% 100%, 22% 100%, 0 100%, 0 0);
   background-image:
-    linear-gradient(to top, rgba(236, 236, 236, 0.45), rgba(255, 255, 126, 0.73)),
-    url("./brick-wall.jpg");
+    linear-gradient(to bottom, rgba(236, 236, 236, 0.45), rgba(255, 255, 126, 0.73)),
+    url("./maps.jpg");
   background-size: cover;
 `;
 
