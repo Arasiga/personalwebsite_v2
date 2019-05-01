@@ -17,6 +17,10 @@ const Container = styled.div`
     linear-gradient(to left, rgba(236, 236, 236, 0.45), rgba(255, 255, 126, 0.73)),
     url("./brick-wall.jpg");
   background-size: cover;
+
+  @media (max-width: 800px) {
+    clip-path: none;
+  }
 `;
 
 export default Landing;
