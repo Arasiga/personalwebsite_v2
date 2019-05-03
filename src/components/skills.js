@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Grid from '@material-ui/core/Grid';
 
 import Title from "./title";
 
@@ -9,6 +10,10 @@ const Skills = () => {
       <TitleContainer>
         <Title title="my skills." />
       </TitleContainer>
+      {/* <Grid container>
+        <Grid item lg={6} md={6} sm={12} xs={12}>
+        </Grid>
+      </Grid> */}
       {/* <SkillsContainer></SkillsContainer> */}
     </Container>
   )
@@ -17,7 +22,6 @@ const Skills = () => {
 const Container = styled.div`
   margin-top: 50px;
   width: 100%;
-  height: 100vh;
   -webkit-clip-path: polygon(66% 0, 100% 5%, 100% 93%, 22% 100%, 0 91%, 0 10%);
   clip-path: polygon(66% 0, 100% 5%, 100% 93%, 22% 100%, 0 91%, 0 10%);
   background-image:
@@ -33,10 +37,6 @@ const Container = styled.div`
 const TitleContainer = styled.div`
   padding: 150px 0 0 8vw;
   color: white;
-
-  @media (max-width: 800px) {
-    padding: 20px 0 0 10px;
-  }
 `;
 
 export default Skills;
