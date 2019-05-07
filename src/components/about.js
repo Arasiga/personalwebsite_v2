@@ -1,31 +1,27 @@
 import React from "react";
 import styled from "styled-components";
 import Grid from '@material-ui/core/Grid';
-
+import { Element } from "react-scroll";
 import Title from "./title";
 
 const About = () => {
   return (
-    <Container>
-      <Grid container>
-        <Grid item lg={6} md={6} sm={12} xs={12}>
-          <Text>
-            <Title title="about me." />
-            <div>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sodales neque sodales ut etiam. Nunc aliquet bibendum enim facilisis gravida neque convallis a cras. Duis tristique sollicitudin nibh sit amet commodo nulla. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor aliquam nulla. Iaculis urna id volutpat lacus laoreet non curabitur.
-            </div>
-            <div>
-              Pellentesque habitant morbi tristique senectus et netus et malesuada. Etiam sit amet nisl purus in mollis. Amet mauris commodo quis imperdiet. Eu sem integer vitae justo eget. Neque gravida in fermentum et sollicitudin ac orci phasellus. Pulvinar pellentesque habitant morbi tristique senectus et. Feugiat pretium nibh ipsum consequat nisl.
-            </div>
-          </Text>
+    <Element name="about">
+      <Container>
+        <Grid container>
+          <Grid item lg={6} md={6} sm={12} xs={12}>
+            <Text>
+              <Title title="about me." />
+            </Text>
+          </Grid>
+          <Grid item lg={6} md={6} sm={12} xs={12}>
+            {/* <ImageContainer>
+              <Image src="./bench.jpg" />
+            </ImageContainer> */}
+          </Grid>
         </Grid>
-        <Grid item lg={6} md={6} sm={12} xs={12}>
-          <ImageContainer>
-            <Image src="./bench.jpg" />
-          </ImageContainer>
-        </Grid>
-      </Grid>
-    </Container>
+      </Container>
+    </Element>
   )
 }
 
@@ -39,7 +35,7 @@ const Text = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 0 15vw 0 8vw;
+  padding: 10vh 0 0 10vw;
 `;
 
 const ImageContainer = styled.div`

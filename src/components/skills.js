@@ -25,7 +25,7 @@ const Container = styled.div`
   -webkit-clip-path: polygon(66% 0, 100% 5%, 100% 93%, 22% 100%, 0 91%, 0 10%);
   clip-path: polygon(66% 0, 100% 5%, 100% 93%, 22% 100%, 0 91%, 0 10%);
   background-image:
-    linear-gradient(to bottom, rgba(236, 236, 236, 0.45), rgba(255, 255, 126, 0.73)),
+    linear-gradient(to bottom, rgba(236, 236, 236, 0.45), rgba(83, 51, 237, 0.73)),
     url("./library.jpg");
   background-size: cover;
 

@@ -17,7 +17,7 @@ const Container = styled.div`
 const Underline = styled.div`
   margin-top: 10px;
   width: 150px;
-  border-bottom: 7px solid rgb(255, 255, 185);
+  border-bottom: 7px solid rgb(83, 51, 237);
 `;
 
 export default Title;

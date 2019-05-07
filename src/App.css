@@ -32,3 +32,17 @@
     transform: rotate(360deg);
   }
 }
+
+.Typist {
+  font-size: 1.7em;
+  letter-spacing: 1.2px;
+  margin-bottom: 25px;
+
+}
+
+@media(max-width: 800px) {
+
+  .Typist {
+    font-size: 1.2em;
+  }
+}
