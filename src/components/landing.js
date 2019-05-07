@@ -93,7 +93,7 @@ const Icon = styled.img`
   width: 20px;
   margin-right: 15px;
   cursor: pointer;
-  animation: all 1s;
+  transition: all 1s;
 
   &:hover {
     transform: scale(1.5);    

@@ -12,12 +12,13 @@ const Title = ({ title }) => {
 
 const Container = styled.div`
   font-size: 30px;
+  font-weight: bold;
 `;
 
 const Underline = styled.div`
   margin-top: 10px;
-  width: 150px;
-  border-bottom: 7px solid rgb(83, 51, 237);
+  width: 100px;
+  border-bottom: 4px solid rgb(83, 51, 237);
 `;
 
 export default Title;
