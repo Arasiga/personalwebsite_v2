@@ -12,7 +12,7 @@ const App = () => {
     <div className="App">
       <Landing />
       <About />
-      <Skills />
+      {/* <Skills /> */}
       <Projects />
       <Contact />
       {/* <header className="App-header">

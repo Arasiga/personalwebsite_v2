@@ -8,7 +8,7 @@ import Title from "./title";
 const Skills = () => {
   return (
     <Element name="skills">
-      <Container data-aos="fade-down-left">
+      <Container>
         <TitleContainer>
           <Title title="my skills." />
         </TitleContainer>
