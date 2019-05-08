@@ -10,7 +10,7 @@ import Title from "./title";
 const About = () => {
   return (
     <Element name="about">
-      <Container>
+      <Container data-aos="fade-down-right">
         <Grid container>
           <Grid item lg={6} md={6} sm={12} xs={12}>
             <Text>
@@ -32,9 +32,9 @@ const About = () => {
             </Text>
           </Grid>
           <Grid item lg={6} md={6} sm={12} xs={12}>
-            {/* <ImageContainer>
+            <ImageContainer>
               <Image src="./bench.jpg" />
-            </ImageContainer> */}
+            </ImageContainer>
           </Grid>
         </Grid>
       </Container>
@@ -65,7 +65,9 @@ const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding-right: 8vw;
+  height: 100%;
+  align-items: center;
+  padding: 25px;
 `;
 
 const Image = styled.img`

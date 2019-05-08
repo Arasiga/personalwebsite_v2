@@ -11,8 +11,12 @@ const Title = ({ title }) => {
 }
 
 const Container = styled.div`
-  font-size: 30px;
+  font-size: 2.5em;
   font-weight: bold;
+
+  @media(max-width: 800px) {
+    font-size: 2em;
+  }
 `;
 
 const Underline = styled.div`
