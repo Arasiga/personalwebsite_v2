@@ -12,8 +12,7 @@ const Projects = () => {
 }
 
 const Container = styled.div`
-  margin-top: 50px;
-  padding: 0 8vw 0 8vw;
+  padding: 50px 8vw 80px 10vw;
 `;
 
 export default Projects;

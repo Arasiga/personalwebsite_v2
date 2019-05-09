@@ -20,7 +20,7 @@ const Contact = () => {
           lg={6} md={6} sm={12} xs={12}
           style={{
             padding: "35px",
-            backgroundColor: "white", 
+            backgroundColor: "white",
           }}
         >
           <Grid container>
@@ -56,7 +56,6 @@ const Contact = () => {
                 label="Message"
                 multiline
                 rows="6"
-                rowsMax="8"
                 variant="outlined"
               />
             </Grid>
@@ -71,13 +70,13 @@ const Contact = () => {
             </Grid>
           </Grid>
         </Grid>
+        <Grid item lg={1} md={1} sm={12} xs={12} style={{ height: "25px" }} />
         <Grid
           item
           lg={3} md={3} sm={12} xs={12}
           style={{
-            marginLeft: "40px",
             padding: "35px",
-            backgroundColor: "white", 
+            backgroundColor: "white",
           }}
         >
           <p style={{ fontWeight: "bold" }}>
@@ -114,8 +113,12 @@ const Container = styled.div`
 `;
 
 const TitleContainer = styled.div`
-  padding: 50px 8vw 0 10vw;
+  padding: 100px 8vw 0 10vw;
   color: white;
+
+  @media (max-width: 800px) {
+    padding: 50px 8vw 0 10vw;
+  }
 `;
 
 const Footer = styled.div`
