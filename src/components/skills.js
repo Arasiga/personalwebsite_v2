@@ -14,29 +14,29 @@ const Skills = () => {
         </TitleContainer>
         <Grid container style={{ textAlign: "center" }}>
           <Grid item lg={4} md={4} sm={6} xs={12}>
-            <IconContainer src="./icons/react-original.svg" alt="" />
+            {/* <IconContainer src="./icons/react-original.svg" alt="" /> */}
             <IconText> React </IconText>
           </Grid>
           <Grid item lg={4} md={4} sm={6} xs={12}>
-            <IconContainer src="./icons/nodejs-original.svg" alt="" />
+            {/* <IconContainer src="./icons/nodejs-original.svg" alt="" /> */}
             <IconText> NodeJS </IconText>
           </Grid>
           <Grid item lg={4} md={4} sm={6} xs={12}>
-            <IconContainer src="./icons/amazonwebservices-original.svg" alt="" />
+            {/* <IconContainer src="./icons/amazonwebservices-original.svg" alt="" /> */}
             <IconText> Amazon Web Services </IconText>
           </Grid>
         </Grid>
         <Grid container style={{ textAlign: "center" }}>
           <Grid item lg={4} md={4} sm={6} xs={12}>
-            <IconContainer src="./icons/linux-plain.svg" alt="" />
+            {/* <IconContainer src="./icons/linux-plain.svg" alt="" /> */}
             <IconText> Linux </IconText>
           </Grid>
           <Grid item lg={4} md={4} sm={6} xs={12}>
-            <IconContainer src="./icons/python-original.svg" alt="" />
+            {/* <IconContainer src="./icons/python-original.svg" alt="" /> */}
             <IconText> Python </IconText>
           </Grid>
           <Grid item lg={4} md={4} sm={6} xs={12}>
-            <IconContainer src="./icons/docker-plain.svg" alt="" />
+            {/* <IconContainer src="./icons/docker-plain.svg" alt="" /> */}
             <IconText> Docker </IconText>
           </Grid>
         </Grid>
@@ -52,7 +52,7 @@ const Container = styled.div`
   clip-path: polygon(78% 0, 100% 6%, 100% 94%, 50% 100%, 0 92%, 0 5%);
   background-image:
     linear-gradient(to bottom, rgba(236, 236, 236, 0.45), rgba(83, 51, 237, 0.73)),
-    url("./laptop.jpg");
+    // url("./laptop.jpg");
   background-size: cover;
   padding-bottom: 8vh;
   
