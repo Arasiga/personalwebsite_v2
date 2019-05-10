@@ -57,8 +57,8 @@ const Text = styled.div`
 
 const AboutText = styled.div`
   letter-spacing: 0.8px;
-  margin-top: 15px;
   line-height: 2em;
+  margin-top: 15px;
 `;
 
 const ImageContainer = styled.div`

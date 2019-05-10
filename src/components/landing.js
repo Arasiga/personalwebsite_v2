@@ -47,7 +47,7 @@ const Landing = () => {
                 <Button
                   variant="outlined"
                   style={{ color: "white", marginTop: "25px", border: "1px solid white" }}>
-                  Hire me
+                  Learn More
                 </Button>
               </Link>
             </div>
