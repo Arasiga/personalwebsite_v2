@@ -76,7 +76,6 @@ const Skills = () => {
 
 const Container = styled.div`
   margin-top: 90px;
-  width: 100%;
   -webkit-clip-path: polygon(84% 3%, 100% 0, 100% 96%, 32% 100%, 0 98%, 0 0);
   clip-path: polygon(84% 3%, 100% 0, 100% 96%, 32% 100%, 0 98%, 0 0);
   background-image:

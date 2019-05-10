@@ -6,10 +6,13 @@ import About from "./components/about";
 import Skills from "./components/skills";
 import Projects from "./components/projects";
 import Contact from "./components/contact";
+import Navbar from './components/navbar';
 
 const App = () => {
+
   return (
     <div className="App">
+      <Navbar />
       <Landing />
       <About />
       <Skills />
