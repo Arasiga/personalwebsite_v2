@@ -37,11 +37,11 @@ const Landing = () => {
                   </Typist>
               )}
             </TypistLoop>
-            <Icon src="./icons/github.svg" alt="" />
+            <Icon src="./icons/linkedin.svg" alt="" />
             <Icon src="./icons/gmail.svg" alt="" />
+            <Icon src="./icons/github.svg" alt="" />
             <Icon src="./icons/instagram.svg" alt="" />
             <Icon src="./icons/leetcode.svg" alt="" />
-            <Icon src="./icons/linkedin.svg" alt="" />
             <div>
               <Link to="about" smooth={true} duration={1000}>
                 <Button

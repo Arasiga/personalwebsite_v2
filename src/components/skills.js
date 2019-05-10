@@ -47,7 +47,7 @@ const Skills = () => {
             lg={12} md={12} sm={12} xs={12}
             style={{ marginTop: "60px", fontSize: "1em" }}
           >
-            <AutoPlaySwipeableViews interval={5000}>
+            <AutoPlaySwipeableViews interval={6500}>
               <SliderContainer>
                 <QuoteIcon src="./icons/opening_quote.svg" />
                 Alex Rasiga has done an amazing job when it comes to the React application for PipsPass. Alex's work was always on time and the final result was better than expected. In addition of being very skilled and talented, Alex is deeply passionate about the work he does, he has an web DNA for sure. What's even greater, is his fast responsiveness as well as his ability to advise you on the best course when you share with him the ideas you want to implement.
@@ -85,8 +85,8 @@ const Container = styled.div`
   background-size: cover;
   padding-bottom: 8vh;
   will-change: transform;
-  letter-spacing: 0.6px;
-  line-height: 1.8em;
+  letter-spacing: 0.7px;
+  line-height: 1.9em;
 
   @media (max-width: 800px) {
     clip-path: none;
@@ -119,6 +119,7 @@ const SliderContainer = styled.div`
   justify-content: center;
   width: 50%;
   margin: auto;
+  font-size: 1.2em;
 
   @media(max-width: 800px) {
     width: 90%;
