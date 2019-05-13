@@ -63,7 +63,7 @@ const Container = styled.div`
   height: 100vh;
   clip-path: polygon(72% 0, 100% 0, 100% 88%, 28% 100%, 0 88%, 0 0);
   background-image:
-    linear-gradient(to left, rgba(236, 236, 236, 0.54), rgba(83, 51, 237, 0.78)),
+    linear-gradient(to left, rgba(236, 236, 236, 0.54), rgba(83, 51, 237, 0.88)),
     url("./brick-wall.jpg");
   background-size: cover;
 

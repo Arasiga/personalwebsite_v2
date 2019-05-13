@@ -1,13 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-
+import { Element } from "react-scroll";
 import Title from "./title";
 
 const Projects = () => {
   return (
-    <Container>
-      <Title title="my projects." />
-    </Container>
+    <Element name="projects">
+      <Container>
+        <Title title="my projects." />
+      </Container>
+    </Element>
   )
 }
 

@@ -51,18 +51,15 @@
   position: fixed;
   height: 7vh;
   width: 100%;
-  /* background: blue; */
   z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 
   transition: background-color 0.5s linear;
 }
 
 .navbar-background {
-  position: fixed;
-  height: 7vh;
-  width: 100%;
   background-color: rgb(83, 51, 237);
-  z-index: 10;
-
-  transition: background-color 0.5s linear;
 }

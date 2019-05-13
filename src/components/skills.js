@@ -3,14 +3,14 @@ import styled from "styled-components";
 import Grid from '@material-ui/core/Grid';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
-// import { Element } from "react-scroll";
+import { Element } from "react-scroll";
 import Title from "./title";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const Skills = () => {
   return (
-    // <Element name="skills">
+    <Element name="skills">
       <Container>
         <TitleContainer>
           <Title title="my skills." />
@@ -70,7 +70,7 @@ const Skills = () => {
           </Grid>
         </Grid>
       </Container>
-    // </Element>
+    </Element>
   )
 }
 
@@ -79,7 +79,7 @@ const Container = styled.div`
   -webkit-clip-path: polygon(84% 3%, 100% 0, 100% 96%, 32% 100%, 0 98%, 0 0);
   clip-path: polygon(84% 3%, 100% 0, 100% 96%, 32% 100%, 0 98%, 0 0);
   background-image:
-    linear-gradient(to bottom, rgba(236, 236, 236, 0.45), rgba(83, 51, 237, 0.73)),
+    linear-gradient(to bottom, rgba(236, 236, 236, 0.45), rgba(83, 51, 237, 0.88)),
     url("./laptop.jpg");
   background-size: cover;
   padding-bottom: 8vh;
