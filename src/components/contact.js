@@ -106,7 +106,7 @@ const Container = styled.div`
   clip-path: polygon(65% 10%, 100% 0, 100% 100%, 22% 100%, 0 100%, 0 0);
   background-image:
     linear-gradient(to bottom, rgba(236, 236, 236, 0.45), rgba(83, 51, 237, 0.88)),
-    url("./maps.jpg");
+    url("https://s3-us-west-2.amazonaws.com/websitev2images/maps-min.jpg");
   background-size: cover;
   padding-bottom: 100px;
 

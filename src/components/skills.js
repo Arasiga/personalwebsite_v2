@@ -80,7 +80,7 @@ const Container = styled.div`
   clip-path: polygon(84% 3%, 100% 0, 100% 96%, 32% 100%, 0 98%, 0 0);
   background-image:
     linear-gradient(to bottom, rgba(236, 236, 236, 0.45), rgba(83, 51, 237, 0.88)),
-    url("./laptop.jpg");
+    url("https://s3-us-west-2.amazonaws.com/websitev2images/laptop-min.jpg");
   background-size: cover;
   padding-bottom: 8vh;
   will-change: transform;

@@ -40,7 +40,7 @@ class Navbar extends Component {
   }
 
   toggleMenu = e => {
-    this.setState({ anchorEl: e.currentTarget });
+    this.setState({ anchorEl: e.currentTarget.parentNode });
   }
 
   handleClose = () => {
@@ -78,16 +78,17 @@ class Navbar extends Component {
           >
             {
               MENU_OPTIONS.map(option => (
-                <MenuItem key={option}>
-                  <Link
-                    to={option}
-                    smooth={true}
-                    duration={1000}
-                    onClick={handleClose}
-                  >
+                <Link
+                  key={option}
+                  to={option}
+                  smooth={true}
+                  duration={1000}
+                  onClick={handleClose}
+                >
+                  <MenuItem>
                     {option}
-                  </Link>
-                </MenuItem>
+                  </MenuItem>
+                </Link>
               ))  
             }
           </Menu>

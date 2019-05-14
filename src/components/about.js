@@ -33,7 +33,7 @@ const About = () => {
           </Grid>
           <Grid item lg={6} md={6} sm={12} xs={12}>
             <ImageContainer>
-              <Image src="./bench.jpg" />
+              <Image src="https://s3-us-west-2.amazonaws.com/websitev2images/bench-min.jpg" />
             </ImageContainer>
           </Grid>
         </Grid>
