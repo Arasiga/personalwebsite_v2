@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/personalwebsite_v2/static/css/main.d57ba758.chunk.css",
+    "main.js": "/personalwebsite_v2/static/js/main.23b974c8.chunk.js",
+    "main.js.map": "/personalwebsite_v2/static/js/main.23b974c8.chunk.js.map",
+    "runtime~main.js": "/personalwebsite_v2/static/js/runtime~main.fb8461a4.js",
+    "runtime~main.js.map": "/personalwebsite_v2/static/js/runtime~main.fb8461a4.js.map",
+    "static/css/2.7abef457.chunk.css": "/personalwebsite_v2/static/css/2.7abef457.chunk.css",
+    "static/js/2.c750acbc.chunk.js": "/personalwebsite_v2/static/js/2.c750acbc.chunk.js",
+    "static/js/2.c750acbc.chunk.js.map": "/personalwebsite_v2/static/js/2.c750acbc.chunk.js.map",
+    "index.html": "/personalwebsite_v2/index.html",
+    "precache-manifest.45b6c6a7cb28eb1487b574545be3f941.js": "/personalwebsite_v2/precache-manifest.45b6c6a7cb28eb1487b574545be3f941.js",
+    "service-worker.js": "/personalwebsite_v2/service-worker.js",
+    "static/css/2.7abef457.chunk.css.map": "/personalwebsite_v2/static/css/2.7abef457.chunk.css.map",
+    "static/css/main.d57ba758.chunk.css.map": "/personalwebsite_v2/static/css/main.d57ba758.chunk.css.map"
+  }
+}
