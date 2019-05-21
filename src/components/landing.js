@@ -1,10 +1,13 @@
-import React from "react";
+import React, { Component } from "react";
 import styled from "styled-components";
 import Grid from "@material-ui/core/Grid";
 import Typist from "react-typist";
 import TypistLoop from "react-typist-loop";
 import { Link } from "react-scroll";
 import Button from "@material-ui/core/Button";
+import Snackbar from '@material-ui/core/Snackbar';
+import IconButton from '@material-ui/core/IconButton';
+import CloseIcon from '@material-ui/icons/Close';
 
 const TEXT = [
   "Software Developer.",
@@ -14,48 +17,115 @@ const TEXT = [
   "Dev Ops Enthousiast."
 ]
 
-const Landing = () => {
-  return (
-    <Container>
-      <Grid container style={{ height: "100%" }}>
-        <Grid item lg={6} md={6} sm={12} xs={12}>
-          <TextContainer>
-            <NameContainer>
-              I'm Alexandru Rasiga.
-            </NameContainer>
-            <TypistLoop interval={200}>
-              {
-                TEXT.map(text => 
-                  <Typist
-                    key={text}
-                    avgTypingSpeed={30}
-                    className="Typist"
-                    cursor={{ element: "_" }}
-                  >
-                    {text}
-                    <Typist.Backspace count={text.length + 1} delay={3500} />
-                  </Typist>
-              )}
-            </TypistLoop>
-            <Icon src="./icons/linkedin.svg" alt="" />
-            <Icon src="./icons/gmail.svg" alt="" />
-            <Icon src="./icons/github.svg" alt="" />
-            <Icon src="./icons/instagram.svg" alt="" />
-            <Icon src="./icons/leetcode.svg" alt="" />
-            <div>
-              <Link to="about" smooth={true} duration={1000}>
-                <Button
-                  variant="outlined"
-                  style={{ color: "white", marginTop: "25px", border: "1px solid white" }}>
-                  Learn More
-                </Button>
-              </Link>
-            </div>
-          </TextContainer>
+class Landing extends Component {
+
+  state = {
+    open: false,
+  };
+
+  handleClick = () => {
+    this.setState({ open: true });
+  };
+
+  handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    this.setState({ open: false });
+  };
+
+  render() {
+    return (
+      <Container>
+        <Grid container style={{ height: "100%" }}>
+          <Grid item lg={6} md={6} sm={12} xs={12}>
+            <TextContainer>
+              <NameContainer>
+                I'm Alexandru Rasiga.
+              </NameContainer>
+              <TypistLoop interval={200}>
+                {
+                  TEXT.map(text => 
+                    <Typist
+                      key={text}
+                      avgTypingSpeed={30}
+                      className="Typist"
+                      cursor={{ element: "_" }}
+                    >
+                      {text}
+                      <Typist.Backspace count={text.length + 1} delay={3500} />
+                    </Typist>
+                )}
+              </TypistLoop>
+              <a
+                href="https://www.linkedin.com/in/alex-rasiga-b3b599119"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon src="./icons/linkedin.svg" alt="" />
+              </a>
+              <Icon onClick={this.handleClick} src="./icons/gmail.svg" alt="" />
+              <a
+                href="https://github.com/Arasiga"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon src="./icons/github.svg" alt="" />
+              </a>
+              <a
+                href="https://www.instagram.com/alexrasiga/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon src="./icons/instagram.svg" alt="" />
+              </a>
+              <a
+                href="https://leetcode.com/arasiga/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon src="./icons/leetcode.svg" alt="" />
+              </a>
+              <div>
+                <Link to="about" smooth={true} duration={1000}>
+                  <Button
+                    variant="outlined"
+                    style={{ color: "white", marginTop: "25px", border: "1px solid white" }}>
+                    Learn More
+                  </Button>
+                </Link>
+              </div>
+            </TextContainer>
+          </Grid>
         </Grid>
-      </Grid>
-    </Container>
-  )
+        <Snackbar
+          anchorOrigin={
+            { vertical: "top", horizontal: "left" }
+          }
+          style={{ zIndex: "200" }}
+          open={this.state.open}
+          autoHideDuration={2000}
+          onClose={this.handleClose}
+          ContentProps={{
+            'aria-describedby': 'message-id',
+          }}
+          message={<span id="message-id">Email copied to clipboard.</span>}
+          action={[
+            <IconButton
+              key="close"
+              aria-label="Close"
+              color="inherit"
+                
+              onClick={this.handleClose}
+            >
+              <CloseIcon />
+            </IconButton>,
+          ]}
+        />
+      </Container>
+    )
+  }
 }
 
 const Container = styled.div`
