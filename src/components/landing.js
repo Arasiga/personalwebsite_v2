@@ -8,6 +8,7 @@ import Button from "@material-ui/core/Button";
 import Snackbar from '@material-ui/core/Snackbar';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
+import Tooltip from '@material-ui/core/Tooltip';
 
 const TEXT = [
   "Software Developer.",
@@ -25,6 +26,36 @@ class Landing extends Component {
 
   handleClick = () => {
     this.setState({ open: true });
+
+    // This will take care of copying to clipboard
+    const textArea = document.createElement("textarea");
+
+    textArea.style.position = 'fixed';
+    textArea.style.top = 0;
+    textArea.style.left = 0;
+    textArea.style.width = '2em';
+    textArea.style.height = '2em';
+    textArea.style.padding = 0;
+    textArea.style.border = 'none';
+    textArea.style.outline = 'none';
+    textArea.style.boxShadow = 'none';
+    textArea.style.background = 'transparent';
+  
+    textArea.value = "alex.rasiga@gmail.com";
+  
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+  
+    try {
+      const successful = document.execCommand("copy");
+      const msg = successful ? "successful" : "unsuccessful";
+      console.log("Copying text command was " + msg);
+    } catch (err) {
+      console.log("Oops, unable to copy");
+    }
+  
+    document.body.removeChild(textArea);
   };
 
   handleClose = (event, reason) => {
@@ -34,6 +65,10 @@ class Landing extends Component {
 
     this.setState({ open: false });
   };
+
+  copyToClipboard = () => {
+
+  }
 
   render() {
     return (
@@ -65,7 +100,9 @@ class Landing extends Component {
               >
                 <Icon src="./icons/linkedin.svg" alt="" />
               </a>
-              <Icon onClick={this.handleClick} src="./icons/gmail.svg" alt="" />
+              <Tooltip title="Click to copy email address">
+                <Icon onClick={this.handleClick} src="./icons/gmail.svg" alt="" />
+              </Tooltip>
               <a
                 href="https://github.com/Arasiga"
                 target="_blank"
@@ -101,7 +138,7 @@ class Landing extends Component {
         </Grid>
         <Snackbar
           anchorOrigin={
-            { vertical: "top", horizontal: "left" }
+            { vertical: "bottom", horizontal: "center" }
           }
           style={{ zIndex: "200" }}
           open={this.state.open}
@@ -110,7 +147,7 @@ class Landing extends Component {
           ContentProps={{
             'aria-describedby': 'message-id',
           }}
-          message={<span id="message-id">Email copied to clipboard.</span>}
+          message={<span id="message-id">alex.rasiga@gmail.com copied to clipboard.</span>}
           action={[
             <IconButton
               key="close"
