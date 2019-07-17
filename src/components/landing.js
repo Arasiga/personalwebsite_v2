@@ -30,16 +30,16 @@ class Landing extends Component {
     // This will take care of copying to clipboard
     const textArea = document.createElement("textarea");
 
-    textArea.style.position = 'fixed';
+    textArea.style.position = "fixed";
     textArea.style.top = 0;
     textArea.style.left = 0;
-    textArea.style.width = '2em';
-    textArea.style.height = '2em';
+    textArea.style.width = "2em";
+    textArea.style.height = "2em";
     textArea.style.padding = 0;
-    textArea.style.border = 'none';
-    textArea.style.outline = 'none';
-    textArea.style.boxShadow = 'none';
-    textArea.style.background = 'transparent';
+    textArea.style.border = "none";
+    textArea.style.outline = "none";
+    textArea.style.boxShadow = "none";
+    textArea.style.background = "transparent";
   
     textArea.value = "alex.rasiga@gmail.com";
   
@@ -66,81 +66,13 @@ class Landing extends Component {
     this.setState({ open: false });
   };
 
-  copyToClipboard = () => {
-
-  }
-
   render() {
     return (
-      <Container>
-        <Grid container style={{ height: "100%" }}>
-          <Grid item lg={6} md={6} sm={12} xs={12}>
-            <TextContainer>
-              <NameContainer>
-                I'm Alexandru Rasiga.
-              </NameContainer>
-              <TypistLoop interval={200}>
-                {
-                  TEXT.map(text => 
-                    <Typist
-                      key={text}
-                      avgTypingSpeed={30}
-                      className="Typist"
-                      cursor={{ element: "_" }}
-                    >
-                      {text}
-                      <Typist.Backspace count={text.length + 1} delay={3500} />
-                    </Typist>
-                )}
-              </TypistLoop>
-              <a
-                href="https://www.linkedin.com/in/alex-rasiga-b3b599119"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Icon src="./icons/linkedin.svg" alt="" />
-              </a>
-              <Tooltip title="Click to copy email address">
-                <Icon onClick={this.handleClick} src="./icons/gmail.svg" alt="" />
-              </Tooltip>
-              <a
-                href="https://github.com/Arasiga"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Icon src="./icons/github.svg" alt="" />
-              </a>
-              <a
-                href="https://www.instagram.com/alexrasiga/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Icon src="./icons/instagram.svg" alt="" />
-              </a>
-              <a
-                href="https://leetcode.com/arasiga/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Icon src="./icons/leetcode.svg" alt="" />
-              </a>
-              <div>
-                <Link to="about" smooth={true} duration={1000}>
-                  <Button
-                    variant="outlined"
-                    style={{ color: "white", marginTop: "25px", border: "1px solid white" }}>
-                    Learn More
-                  </Button>
-                </Link>
-              </div>
-            </TextContainer>
-          </Grid>
-        </Grid>
+      <>
         <Snackbar
           anchorOrigin={
             { vertical: "bottom", horizontal: "center" }
           }
-          style={{ zIndex: "200" }}
           open={this.state.open}
           autoHideDuration={2000}
           onClose={this.handleClose}
@@ -160,7 +92,72 @@ class Landing extends Component {
             </IconButton>,
           ]}
         />
-      </Container>
+        <Container>
+          <Grid container style={{ height: "100%" }}>
+            <Grid item lg={6} md={6} sm={12} xs={12}>
+              <TextContainer>
+                <NameContainer>
+                  I'm Alexandru Rasiga.
+                </NameContainer>
+                <TypistLoop interval={200}>
+                  {
+                    TEXT.map(text => 
+                      <Typist
+                        key={text}
+                        avgTypingSpeed={30}
+                        className="Typist"
+                        cursor={{ element: "_" }}
+                      >
+                        {text}
+                        <Typist.Backspace count={text.length + 1} delay={3500} />
+                      </Typist>
+                  )}
+                </TypistLoop>
+                <a
+                  href="https://www.linkedin.com/in/alex-rasiga-b3b599119"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Icon src="./icons/linkedin.svg" alt="" />
+                </a>
+                <Tooltip title="Click to copy email address">
+                  <Icon onClick={this.handleClick} src="./icons/gmail.svg" alt="" />
+                </Tooltip>
+                <a
+                  href="https://github.com/Arasiga"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Icon src="./icons/github.svg" alt="" />
+                </a>
+                <a
+                  href="https://www.instagram.com/alexrasiga/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Icon src="./icons/instagram.svg" alt="" />
+                </a>
+                <a
+                  href="https://leetcode.com/arasiga/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Icon src="./icons/leetcode.svg" alt="" />
+                </a>
+                <div>
+                  <Link to="about" smooth={true} duration={1000}>
+                    <Button
+                      variant="outlined"
+                      style={{ color: "white", marginTop: "25px", border: "1px solid white" }}>
+                      Learn More
+                    </Button>
+                  </Link>
+                </div>
+              </TextContainer>
+            </Grid>
+          </Grid>
+        </Container>
+      </>
     )
   }
 }
@@ -172,7 +169,7 @@ const Container = styled.div`
   background-image:
     linear-gradient(to left, rgba(236, 236, 236, 0.54), rgba(83, 51, 237, 0.88)),
     url("https://s3-us-west-2.amazonaws.com/websitev2images/brick-wall-min.jpg");
-  background-size: cover;
+  background-size: cover; 
 
   @media (max-width: 800px) {
     clip-path: none;
