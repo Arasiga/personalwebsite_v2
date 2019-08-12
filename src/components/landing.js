@@ -168,7 +168,7 @@ const Container = styled.div`
   clip-path: polygon(72% 0, 100% 0, 100% 88%, 28% 100%, 0 88%, 0 0);
   background-image:
     linear-gradient(to left, rgba(236, 236, 236, 0.54), rgba(83, 51, 237, 0.88)),
-    url("https://s3-us-west-2.amazonaws.com/websitev2images/brick-wall-min.jpg");
+    url("https://s3-us-west-2.amazonaws.com/websitev2images/brick-wall.jpg");
   background-size: cover; 
 
   @media (max-width: 800px) {
