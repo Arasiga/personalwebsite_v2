@@ -10,6 +10,9 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 AOS.init();
 
 const theme = createMuiTheme({
+  typography: {
+    useNextVariants: true,
+  },
   palette: {
     primary: {
       main: "rgb(83, 51, 237)"

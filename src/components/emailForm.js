@@ -13,7 +13,8 @@ class EmailForm extends Component {
     name: "",
     email: "",
     message: "",
-    open: false
+    open: false,
+    snackbarMessage: "Message sent succesfully!"
   }
 
   onChangeValue = name => event => {
@@ -22,18 +23,29 @@ class EmailForm extends Component {
 
   onSubmit = e => {
     e.preventDefault();
-    this.setState({ open: true });
 
     const { name, email, message } = this.state;
 
+    const config = {
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    }
+
     // Call api to send out email
-    axios.post("ec2-52-26-220-40.us-west-2.compute.amazonaws.com:9000/sendEmail", {
+    axios.post("http://ec2-34-215-168-75.us-west-2.compute.amazonaws.com/sendEmail", {
       name,
       email,
       message
-    });
-
-    this.setState({ name: "", email: "", message: "" });
+    }, config)
+      .then( () => {
+        this.setState({ name: "", email: "", message: "", open: true, snackbarMessage: "Message sent succesfully!" });
+      })
+      .catch( err => {
+        this.setState({ open: true, snackbarMessage: "Oops! Something went wrong - please try again." })
+      });
   }
 
   handleSnackbarClose = (event, reason) => {
@@ -45,7 +57,7 @@ class EmailForm extends Component {
   }
 
   render() {
-    const { name, email, message, open } = this.state;
+    const { name, email, message, open, snackbarMessage } = this.state;
     const { onChangeValue, onSubmit, handleSnackbarClose } = this;
 
     return (
@@ -60,7 +72,7 @@ class EmailForm extends Component {
           ContentProps={{
             'aria-describedby': 'message-id',
           }}
-          message={<span id="message-id">Message sent successfully!</span>}
+          message={<span id="message-id">{ snackbarMessage }</span>}
           action={[
             <IconButton
               key="close"
