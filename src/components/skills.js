@@ -131,9 +131,4 @@ const QuoteIcon = styled.img`
   width: 24px;
 `;
 
-const Name = styled.div`
-  font-size: 1.5em;
-  font-weight: bold;
-`;
-
 export default Skills;

@@ -26,20 +26,12 @@ class EmailForm extends Component {
 
     const { name, email, message } = this.state;
 
-    const config = {
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      }
-    }
-
     // Call api to send out email
     axios.post("http://ec2-34-215-168-75.us-west-2.compute.amazonaws.com/sendEmail", {
       name,
       email,
       message
-    }, config)
+    })
       .then( () => {
         this.setState({ name: "", email: "", message: "", open: true, snackbarMessage: "Message sent succesfully!" });
       })
