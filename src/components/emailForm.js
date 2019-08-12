@@ -5,6 +5,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import Button from "@material-ui/core/Button";
+import CircularProgress from '@material-ui/core/CircularProgress';
 import axios from 'axios';
 
 class EmailForm extends Component {
@@ -14,6 +15,7 @@ class EmailForm extends Component {
     email: "",
     message: "",
     open: false,
+    emailLoading: false,
     snackbarMessage: "Message sent succesfully!"
   }
 
@@ -26,6 +28,8 @@ class EmailForm extends Component {
 
     const { name, email, message } = this.state;
 
+    this.setState({ emailLoading: true });
+
     // Call api to send out email
     axios.post("http://ec2-34-215-168-75.us-west-2.compute.amazonaws.com/sendEmail", {
       name,
@@ -33,10 +37,21 @@ class EmailForm extends Component {
       message
     })
       .then( () => {
-        this.setState({ name: "", email: "", message: "", open: true, snackbarMessage: "Message sent succesfully!" });
+        this.setState({
+          name: "",
+          email: "",
+          message: "",
+          open: true,
+          snackbarMessage: "Message sent succesfully!",
+          emailLoading: false
+        });
       })
       .catch( err => {
-        this.setState({ open: true, snackbarMessage: "Oops! Something went wrong - please try again." })
+        this.setState({
+          open: true,
+          snackbarMessage: "Oops! Something went wrong - please try again.",
+          emailLoading: false
+        })
       });
   }
 
@@ -49,7 +64,7 @@ class EmailForm extends Component {
   }
 
   render() {
-    const { name, email, message, open, snackbarMessage } = this.state;
+    const { name, email, message, open, snackbarMessage, emailLoading } = this.state;
     const { onChangeValue, onSubmit, handleSnackbarClose } = this;
 
     return (
@@ -123,14 +138,18 @@ class EmailForm extends Component {
             />
           </Grid>
           <Grid item lg={12} md={12} sm={12} xs={12} style={{ textAlign: "center" }}>
-            <Button
-              variant="contained"
-              color="primary"
-              style={{ width: "150px", marginTop: "25px" }}
-              type="submit"
-            >
-              Submit
-            </Button>
+            { 
+              emailLoading ? 
+              <CircularProgress style={{ marginTop: "25px" }} /> : 
+              <Button
+                variant="contained"
+                color="primary"
+                style={{ width: "150px", marginTop: "25px" }}
+                type="submit"
+              >
+                Submit
+              </Button>
+            }
           </Grid>
         </Grid>
       </form>
