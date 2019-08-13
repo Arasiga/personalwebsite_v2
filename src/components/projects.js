@@ -10,7 +10,7 @@ function a11yProps(index) {
   return {
     id: `vertical-tab-${index}`,
     "aria-controls": `vertical-tabpanel-${index}`,
-    style: { fontSize: "1rem" }
+    style: { fontSize: "1rem", height: "75px" }
   };
 }
 
@@ -31,7 +31,7 @@ const Projects = ({ screenWidth }) => {
             variant="scrollable"
             value={value}
             onChange={handleChange}
-            style={{ borderRight: "1 px solid grey" }}
+            style={{ borderRight: "1 px solid grey", margin: "0 40px 40px 0" }}
             indicatorColor="primary"
           >
             <Tab label="Old Personal Website" {...a11yProps(0)} />
@@ -40,21 +40,41 @@ const Projects = ({ screenWidth }) => {
             <Tab label="Mindset Labs" {...a11yProps(3)} />
             <Tab label="React Native Apps" {...a11yProps(4)} />
           </Tabs>
-          <TabPanel value={value} index={0}>
-            Item One
-          </TabPanel>
-          <TabPanel value={value} index={1}>
-            Item Two
-          </TabPanel>
-          <TabPanel value={value} index={2}>
-            Item Three
-          </TabPanel>
-          <TabPanel value={value} index={3}>
-            Item Four
-          </TabPanel>
-          <TabPanel value={value} index={4}>
-            Item Five
-          </TabPanel>
+          <TabPanel
+            value={value}
+            info="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit amet nulla pulvinar, posuere dui blandit, vehicula nisl. Aliquam a ligula sit amet mauris malesuada tempus. In facilisis venenatis lorem, eu vehicula eros eleifend at. Curabitur tincidunt sapien urna, non mollis risus semper in. Aliquam quis elementum sem. Curabitur viverra lobortis erat, eu lobortis sapien. Nam pellentesque arcu mi, in lobortis tortor dapibus eget. Suspendisse potenti. Proin molestie mauris quis massa iaculis, quis tincidunt mauris vestibulum."
+            skills={["python", "javascript"]}
+            image="https://s3.amazonaws.com/alexrasiga.ca.images/screenshots/personalwebsite.jpg"
+            index={0}
+          />
+          <TabPanel
+            value={value}
+            info=""
+            skills={["python", "javascript"]}
+            image="https://s3.amazonaws.com/alexrasiga.ca.images/screenshots/codemeeting.jpg"
+            index={1}
+          />
+          <TabPanel
+            value={value}
+            info="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit amet nulla pulvinar, posuere dui blandit, vehicula nisl. Aliquam a ligula sit amet mauris malesuada tempus. In facilisis venenatis lorem, eu vehicula eros eleifend at. Curabitur tincidunt sapien urna, non mollis risus semper in. Aliquam quis elementum sem. Curabitur viverra lobortis erat, eu lobortis sapien. Nam pellentesque arcu mi, in lobortis tortor dapibus eget. Suspendisse potenti. Proin molestie mauris quis massa iaculis, quis tincidunt mauris vestibulum."
+            skills={["python", "javascript"]}
+            image="https://s3.amazonaws.com/alexrasiga.ca.images/screenshots/root.jpg"
+            index={2}
+          />
+          <TabPanel
+            value={value}
+            info=""
+            skills={["python", "javascript"]}
+            image="https://s3.amazonaws.com/alexrasiga.ca.images/screenshots/mindset.jpg"
+            index={3}
+          />
+          <TabPanel
+            value={value}
+            info="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit amet nulla pulvinar, posuere dui blandit, vehicula nisl. Aliquam a ligula sit amet mauris malesuada tempus. In facilisis venenatis lorem, eu vehicula eros eleifend at. Curabitur tincidunt sapien urna, non mollis risus semper in. Aliquam quis elementum sem. Curabitur viverra lobortis erat, eu lobortis sapien. Nam pellentesque arcu mi, in lobortis tortor dapibus eget. Suspendisse potenti. Proin molestie mauris quis massa iaculis, quis tincidunt mauris vestibulum."
+            skills={["python", "javascript"]}
+            image="https://websitev2images.s3-us-west-2.amazonaws.com/brick-wall.jpg"
+            index={4}
+          />
         </TabContainer>
       </Container>
     </Element>
@@ -62,14 +82,14 @@ const Projects = ({ screenWidth }) => {
 }
 
 const Container = styled.div`
-  padding: 50px 8vw 80px 10vw;
+  padding: 50px 8vw 50px 10vw;
 `;
 
 const TabContainer = styled.div`
   flex-grow: 1;
   display: flex;
   margin-top: 50px;
-  max-height: 400px;
+  min-height: 400px;
   flex-direction: ${props => props.screenWidth < 1000 ? "column" : "row"}
 `;
 
