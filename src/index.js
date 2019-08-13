@@ -12,6 +12,13 @@ AOS.init();
 const theme = createMuiTheme({
   typography: {
     useNextVariants: true,
+    fontFamily: [
+      'Montserrat',
+      'Raleway',
+      '"Helvetica Neue"',
+      'Arial',
+      'sans-serif',
+    ].join(','),
   },
   palette: {
     primary: {
