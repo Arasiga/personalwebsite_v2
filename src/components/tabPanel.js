@@ -56,8 +56,10 @@ const InfoContainer = styled.p`
 `;
 
 const ImageContainer = styled.img`
-  max-height: 330px;
-  max-width: 450px;
+  height: 100%;
+  width: 100%;
+  max-height: 290px;
+  max-width: 440px;
 `;
 
 export default TabPanel;
