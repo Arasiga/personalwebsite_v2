@@ -36,24 +36,24 @@ const Projects = ({ screenWidth }) => {
             style={{ ...tabStyle, borderRight: "1 px solid grey" }}
             indicatorColor="primary"
           >
-            <Tab label="Old Personal Website" {...a11yProps(0)} />
-            <Tab label="CodeMeeting" {...a11yProps(1)} />
+            <Tab label="CodeMeeting" {...a11yProps(0)} />
+            <Tab label="Old Personal Website" {...a11yProps(1)} />
             <Tab label="ROOT Education" {...a11yProps(2)} />
             <Tab label="Mindset Labs" {...a11yProps(3)} />
             <Tab label="React Native Apps" {...a11yProps(4)} />
           </Tabs>
           <TabPanel
             value={value}
-            info="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit amet nulla pulvinar, posuere dui blandit, vehicula nisl. Aliquam a ligula sit amet mauris malesuada tempus. In facilisis venenatis lorem, eu vehicula eros eleifend at. Curabitur tincidunt sapien urna, non mollis risus semper in. Aliquam quis elementum sem. Curabitur viverra lobortis erat, eu lobortis sapien. Nam pellentesque arcu mi, in lobortis tortor dapibus eget. Suspendisse potenti. Proin molestie mauris quis massa iaculis, quis tincidunt mauris vestibulum."
-            skills={["React", "Adobe Illustrator", "Amazon Web Services", "Bootstrap"]}
-            image="https://s3.amazonaws.com/alexrasiga.ca.images/screenshots/personalwebsite.jpg"
+            info="Donec nec tortor nec nisi rutrum iaculis aliquet ac nulla. Nam a neque rutrum, pretium nibh id, convallis orci. Phasellus aliquet tempus ultricies. Fusce mattis egestas nulla quis accumsan. Vestibulum vel ante nisi. Curabitur elit nulla, ultrices ac convallis vel, porttitor quis risus. Vestibulum erat velit, semper et felis ut, tempus rutrum augue."
+            skills={["React", "Node JS", "Web RTC", "Web Sockets", "PostgreSQL", "Bootstrap"]}
+            image="https://s3.amazonaws.com/alexrasiga.ca.images/screenshots/codemeeting.jpg"
             index={0}
           />
           <TabPanel
             value={value}
-            info="Donec nec tortor nec nisi rutrum iaculis aliquet ac nulla. Nam a neque rutrum, pretium nibh id, convallis orci. Phasellus aliquet tempus ultricies. Fusce mattis egestas nulla quis accumsan. Vestibulum vel ante nisi. Curabitur elit nulla, ultrices ac convallis vel, porttitor quis risus. Vestibulum erat velit, semper et felis ut, tempus rutrum augue."
-            skills={["React", "Node JS", "Web RTC", "Web Sockets", "PostgreSQL", "Bootstrap"]}
-            image="https://s3.amazonaws.com/alexrasiga.ca.images/screenshots/codemeeting.jpg"
+            info="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit amet nulla pulvinar, posuere dui blandit, vehicula nisl. Aliquam a ligula sit amet mauris malesuada tempus. In facilisis venenatis lorem, eu vehicula eros eleifend at. Curabitur tincidunt sapien urna, non mollis risus semper in. Aliquam quis elementum sem. Curabitur viverra lobortis erat, eu lobortis sapien. Nam pellentesque arcu mi, in lobortis tortor dapibus eget. Suspendisse potenti. Proin molestie mauris quis massa iaculis, quis tincidunt mauris vestibulum."
+            skills={["React", "Adobe Illustrator", "Amazon Web Services", "Bootstrap"]}
+            image="https://s3.amazonaws.com/alexrasiga.ca.images/screenshots/personalwebsite.jpg"
             index={1}
           />
           <TabPanel

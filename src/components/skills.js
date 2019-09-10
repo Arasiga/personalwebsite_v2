@@ -47,7 +47,7 @@ const Skills = () => {
             lg={12} md={12} sm={12} xs={12}
             style={{ marginTop: "60px", fontSize: "1em" }}
           >
-            <AutoPlaySwipeableViews interval={6500}>
+            <AutoPlaySwipeableViews interval={8000}>
               <SliderContainer>
                 <QuoteIcon src="./icons/opening_quote.svg" />
                 Alex Rasiga has done an amazing job when it comes to the React application for PipsPass. Alex's work was always on time and the final result was better than expected. In addition of being very skilled and talented, Alex is deeply passionate about the work he does, he has an web DNA for sure. What's even greater, is his fast responsiveness as well as his ability to advise you on the best course when you share with him the ideas you want to implement.
@@ -59,6 +59,12 @@ const Skills = () => {
                 Alex worked on a hobby side project with me, and was great to work with - he's an incredibly fast learner, and went from limited prior programming experience to becoming an excellent frontend developer in a very short space of time. He'd be a real asset for any team.
                 <QuoteIcon src="./icons/closing_quote.svg" />
                 <strong>Harshvardhan Sukthankar</strong>Previous Class Peer @ Lighthouse Labs
+              </SliderContainer>
+              <SliderContainer>
+                <QuoteIcon src="./icons/opening_quote.svg" />
+                I have worked with Alex on a large complex technical project, his work was done on time and with a high degree of professionalism. Alex was able to get up to speed on our technical stack and product and build out key functional areas quickly. He was able to suggest architectural changes to the tech stack to enable the team to be more efficient and stabilize our codebase longer term. I highly recommend Alex for future technical projects.
+                <QuoteIcon src="./icons/closing_quote.svg" />
+                <strong>James Legue</strong>Previous Employer @ Emagin
               </SliderContainer>
               <SliderContainer>
                 <QuoteIcon src="./icons/opening_quote.svg" />
