@@ -99,7 +99,7 @@ class Landing extends Component {
                 <NameContainer>
                   I'm Alexandru Rasiga.
                 </NameContainer>
-                <TypistLoop interval={200}>
+                <TypistLoop interval={100}>
                   {
                     TEXT.map(text => 
                       <Typist
@@ -109,7 +109,7 @@ class Landing extends Component {
                         cursor={{ element: "_" }}
                       >
                         {text}
-                        <Typist.Backspace count={text.length + 1} delay={3500} />
+                        <Typist.Backspace count={text.length + 1} delay={750} />
                       </Typist>
                   )}
                 </TypistLoop>
