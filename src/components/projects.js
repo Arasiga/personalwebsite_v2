@@ -74,7 +74,6 @@ const Projects = ({ screenWidth }) => {
             value={value}
             info="As mentioned in the about section, I recently completed a course introducing me to React Native. As I was progressing through the course, I was able to create several apps for react native including a employee manager app, an authentication app, and a app that would connect to an api serving music albums"
             skills={["React Native", "Firebase"]}
-            image="https://websitev2images.s3-us-west-2.amazonaws.com/brick-wall.jpg"
             index={4}
           />
         </TabContainer>

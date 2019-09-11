@@ -44,7 +44,12 @@ const TabPanel = (props) => {
           lg={4} md={4} sm={12} xs={12}
           style={{ display: "flex", justifyContent: "center"}}
         >
-          <ImageContainer src={image} alt="" />
+          {
+            image ?
+            <ImageContainer src={image} alt="" /> :
+            <></>
+          }
+
         </Grid>
       </Grid>
     </Typography>
