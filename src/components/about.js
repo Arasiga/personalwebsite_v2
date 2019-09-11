@@ -34,7 +34,7 @@ const About = () => {
                 variant="contained"
                 color="primary"
                 style={{ width: "250px", marginTop: "35px" }}
-                onClick={ () => window.open("https://websitev2images.s3-us-west-2.amazonaws.com/Alex-Rasiga-Resume-V7.pdf", "_blank") }
+                onClick={ () => window.open("https://websitev2images.s3-us-west-2.amazonaws.com/Alex-Rasiga-Resume-V8.pdf", "_blank") }
               >
                 <SaveIcon style={{ marginRight: "5px" }} />
                 Download Resume
