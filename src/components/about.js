@@ -7,7 +7,7 @@ import SaveIcon from '@material-ui/icons/Save';
 
 import Title from "./title";
 
-const first = "Hello and welcome to my website! My name is Alexandru Rasiga and I am a third year student at the University of Waterloo studying Computer Engineering! I built this website from the ground up to facilitate my introduction and create a portal for the world wide web to learn more about me. This page is built from scratch using React.js in conjunction with Amazon's Web Services (AWS)."
+const first = "Hello and welcome to my website! My name is Alexandru Rasiga and I am a third year student at the University of Waterloo studying Computer Engineering! I built this website from the ground up to facilitate my introduction and create a portal for the world wide web to learn more about me. This page is built from scratch using React in conjunction with Amazon's Web Services (AWS)."
 const second = "My time at the University of Waterloo and Lighthouse Lab's Web Development Bootcamp inspired my passion for software development. I've had the privilege to complete three magnificent internships at 360 Insights, Shop Bonsai, and Emagin. Each with their own contribution to my professional development enabled me to learn various skills in the software world. Notably software infrastructure with Docker and AWS, front-end development and design using React, as well as back-end systems using Node.js and GraphQl. I strive to broaden my skills everyday and learn new technologies in the ever evolving world of software development. I am actively pursuing online courses for machine learning in python and most recently completed a course introducing me to React Native. Check out more below to see what I'm developing!"
 const third = "Some interesting facts about me include: I am trilingual (English, French, and Romanian), I've played soccer all my life (including Waterloo's Varsity team for 2 years), and I love to travel."
 
@@ -34,7 +34,7 @@ const About = () => {
                 variant="contained"
                 color="primary"
                 style={{ width: "250px", marginTop: "35px" }}
-                onClick={ () => window.open("https://websitev2images.s3-us-west-2.amazonaws.com/Alex-Rasiga-Resume-V8.pdf", "_blank") }
+                onClick={ () => window.open("https://websitev2images.s3-us-west-2.amazonaws.com/Alex-Rasiga-Resume-V10.pdf", "_blank") }
               >
                 <SaveIcon style={{ marginRight: "5px" }} />
                 Download Resume
